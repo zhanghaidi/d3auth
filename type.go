@@ -21,6 +21,7 @@ type Auth_qq_err_res struct {
 type Auth_qq_me struct {
 	Client_ID string `json:"client_id"`
 	OpenID    string `json:"openid"`
+	Unionid   string `json:"unionid"`
 }
 
 //@ qq 结构 ------------------------------------------------- end
