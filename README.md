@@ -5,7 +5,7 @@
 
 # 安装
 
-`go get gitee.com/zchunshan/d3auth`
+`go get github.com/zhanghaidi/d3auth.git`
 
 [![GoDoc](http://www.godoc.org/gitee.com/zchunshan/d3auth?status.svg)](http://www.godoc.org/gitee.com/zchunshan/d3auth)
 
