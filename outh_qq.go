@@ -9,6 +9,7 @@ import (
 
 //获取登录地址
 func (e *Auth_qq) Get_Rurl(state string) string {
+
 	return "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=" + e.Conf.Appid + "&redirect_uri=" + e.Conf.Rurl + "&state=" + state
 }
 
@@ -46,7 +47,7 @@ func (e *Auth_qq) Get_Token(code string) (string, error) {
 //获取第三方id
 func (e *Auth_qq) Get_Me(access_token string) (*Auth_qq_me, error) {
 
-	str, err := HttpGet("https://graph.qq.com/oauth2.0/me?access_token=" + access_token)
+	str, err := HttpGet("https://graph.qq.com/oauth2.0/me?access_token=" + access_token + "&unionid=1")
 	if err != nil {
 		return nil, err
 	}
